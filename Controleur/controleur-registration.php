@@ -2,6 +2,6 @@
 
 require('../Modele/modele.php');
 
-$registration = login();
+$registration = register();
 
 require('../Vue/register.php');

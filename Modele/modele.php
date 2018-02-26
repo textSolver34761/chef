@@ -14,7 +14,7 @@ function prepareStatement($sql) {
     return $pdo_statement;
 }
 
-function login(){
+function register(){
 	if(isset($_POST['register'])){
 	  $pdo_statement = prepareStatement(
 		  'INSERT INTO utilisateurs(nom, prenom, email, motpasse)
@@ -31,18 +31,31 @@ function login(){
 			echo 'You have been successfully registred!';
 		}
 	}
-	elseif(isset($_POST['login'])){
-		$select = $pdo_statement->prepare("SELECT * FROM utilisateurs WHERE email='$email' AND motpass='$motpass'");
-		$select = setFetchMode(PDO::FETCH_ASSOC);
-		$select->execute();
-		$data=$select->fetch();
-		if($data['email']!=$email and $data['motpass']!=$motpass){
-			echo "invalid password and/or email";
+}
+
+function login(){
+	session_start();
+	if(isset($_POST['login'])){
+		if(empty($_POST["nom"]) || empty($_POST["motpasse"])){
+			$message ='<label> All fields are required </label>';
 		}
-		elseif($data['email']==$email and $data['motpass']==$motpass){
-			$_SESSION['email']=$data['email'];
-			$_SESSION['name']=$data['name'];
-			header("location:blog.php");
+		else{
+			$query = "SELECT * FROM utilisateurs WHERE nom =:nom AND password =:password";
+			$statement = $pdo->prepare($query);
+			$statement->execute(
+				array(
+					'nom' => $_POST["nom"],
+					'motpass' => $_POST["motpass"]
+				)
+			);
+			$count = $statement->rowCount();
+			if($count > 0){
+				$_SESSION["nom"] = $_POST["nom"];
+				header("location:blog.php");
+			}
+			else{
+				$message = '<label> Wrong data </label>';
+			}
 		}
-	} 
+	}
 }

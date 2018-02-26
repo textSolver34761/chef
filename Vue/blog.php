@@ -1,15 +1,11 @@
-<!--if( the user is not logged ) then, warn him : echo <h1> To access this page, please register yourself </h1>
-if the user is looged, then authorize him with the session_start and $_session['name']
- -->
-
 <?php
-//if() {
-echo '<h1> To access this page, please register yourself </h1>';
-//}
-
-//else(){
 session_start();
-echo "Welcome '.$prenom.'";
-//}
+if(isset($_SESSION['nom'])){
+    echo '<h2> Loggin success! Welcome '.$_SESSION[nom].' </h2>';
+    echo '<h2> Enjoy the tips and tutorials on this blog! </h2>';
+    echo '<h2> <a href"logout.php"> Logout </a> </h2>';
+}
+else{
+    header("location:index.php");
+}
 ?>
-

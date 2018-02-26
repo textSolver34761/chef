@@ -1,14 +1,14 @@
+<hr>
 <div>
     
     <p>
-        Follow me on social networks:
-        <a href="twitter.com/benjamin_pradon">Twitter</a> <br>
+        Follow me on social networks: <br>
+        <a href="https://www.twitter.com/benjamin_pradon">Twitter</a> <br>
         <a href="https://www.linkedin.com/in/benjaminpradon/">LinkedIn</a>
     </p>
     
     <p>
-        Contact me:
-        <a href="Vue/contact.php"></a>
+        <a href="Vue/contact.php">Contact me</a>
     </p>
 
     <p>
