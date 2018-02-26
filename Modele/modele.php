@@ -14,23 +14,35 @@ function prepareStatement($sql) {
     return $pdo_statement;
 }
 
-function fetchData(){
-	if (isset($_POST['submit'])) {
-		$pdo_statement = prepareStatement(
-			'INSERT INTO utilisateurs(nom, prenom, email, motpasse, message, sujet)
-			VALUES(:nom, :prenom, :email, :motpasse, :message, :sujet)');
+function login(){
+	if(isset($_POST['register'])){
+	  $pdo_statement = prepareStatement(
+		  'INSERT INTO utilisateurs(nom, prenom, email, motpasse)
+		  VALUES(:nom, :prenom, :email, :motpasse)');
 
 		if(
 			$pdo_statement &&
 			$pdo_statement->bindParam(':nom', $_POST['nom']) &&
 			$pdo_statement->bindParam(':prenom', $_POST['prenom']) &&
 			$pdo_statement->bindParam(':email', $_POST['email']) &&
-			$pdo_statement->bindParam(':message', $_POST['message']) &&
-			$pdo_statement->bindParam(':sujet', $_POST['sujet']) &&
+			$pdo_statement->bindParam(':motpasse', $_POST['motpasse']) &&
 			$pdo_statement->execute()
 		){
-			echo 'Merci pour votre message!';
+			echo 'You have been successfully registred!';
 		}
 	}
-	return $pdo_statement;
+	elseif(isset($_POST['login'])){
+		$select = $pdo_statement->prepare("SELECT * FROM utilisateurs WHERE email='$email' AND motpass='$motpass'");
+		$select = setFetchMode(PDO::FETCH_ASSOC);
+		$select->execute();
+		$data=$select->fetch();
+		if($data['email']!=$email and $data['motpass']!=$motpass){
+			echo "invalid password and/or email";
+		}
+		elseif($data['email']==$email and $data['motpass']==$motpass){
+			$_SESSION['email']=$data['email'];
+			$_SESSION['name']=$data['name'];
+			header("location:blog.php");
+		}
+	} 
 }

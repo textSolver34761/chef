@@ -12,6 +12,10 @@
     <!--<div class="bgimg">-->
       <?#php require __DIR__.'Vue/entete.php';?>
         <h1>Welcome on my personal website</h1>
+        <div class="register">
+          <a href="Controleur/controleur-registration.php"> Register </a>
+          <a href="Controleur/controleur-login.php"> Login </a>
+        </div>
         <p>
           Hi, I'm Benjamin Pradon. <br>
           This is my personal website. <br>
