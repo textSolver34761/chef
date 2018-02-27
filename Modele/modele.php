@@ -40,18 +40,18 @@ function login(){
 			$message ='<label> All fields are required </label>';
 		}
 		else{
-			$query = "SELECT * FROM utilisateurs WHERE nom =:nom AND password =:password";
-			$statement = $pdo->prepare($query);
-			$statement->execute(
+			$query = "SELECT * FROM utilisateurs WHERE nom =:nom AND motpasse =:motpasse";
+			$pdo_statement = prepareStatement($query);
+			$pdo_statement->execute(
 				array(
 					'nom' => $_POST["nom"],
-					'motpass' => $_POST["motpass"]
+					'motpasse' => $_POST["motpasse"]
 				)
 			);
-			$count = $statement->rowCount();
+			$count = $pdo_statement->rowCount();
 			if($count > 0){
 				$_SESSION["nom"] = $_POST["nom"];
-				header("location:blog.php");
+				header("location:require_once('Controleur/controleur-blog.php')");
 			}
 			else{
 				$message = '<label> Wrong data </label>';

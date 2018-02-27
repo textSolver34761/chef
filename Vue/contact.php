@@ -7,9 +7,9 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" type="text/css" href="Style/semantic.css">
         <link rel="stylesheet" type="text/css" href="Style/style.css">
+        <script type="text/javascript" src="style.js"></script>
     </head>
   <body>
-    <?#php require __DIR__.'Vue/entete.php';?>
     <h1>Contact me </h1>
     <form method="post" action="https://formspree.io/pradonbenjamin@gmail.com">
 
@@ -44,6 +44,5 @@
         </p>
 
     </form>
-    <?#php require __DIR__.'Vue/piedpage.php';?>
   </body>
 </html>

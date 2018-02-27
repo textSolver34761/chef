@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="Style/semantic.css">
     <link rel="stylesheet" type="text/css" href="Style/style.css">
+    <script type="text/javascript" src="style.js"></script>
     <title>Home page</title>
   </head>
   <body>
