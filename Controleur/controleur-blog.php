@@ -2,6 +2,6 @@
 
 require __DIR__.'/Modele/modele.php';
 
-$contact = fetchData();
+$contact = Admin();
 
 require __DIR__.'/Vue/blog.php';

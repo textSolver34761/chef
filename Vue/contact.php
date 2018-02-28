@@ -10,6 +10,7 @@
         <script type="text/javascript" src="style.js"></script>
     </head>
   <body>
+    <?php require('../Vue/entete.php');?>
     <h1>Contact me </h1>
     <form method="post" action="https://formspree.io/pradonbenjamin@gmail.com">
 
@@ -44,5 +45,6 @@
         </p>
 
     </form>
+    <?php require('../Vue/piedpage.php');?>
   </body>
 </html>

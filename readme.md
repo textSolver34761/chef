@@ -18,5 +18,5 @@ It will be shown to an examination board with a view to obtaining a State Diplom
 <br>
 Here are the first lots of the project: <br>
 Lot 1: contact + blog (23/02/18: page contact made, the blog page must wait for lot 2) <br>
-Lot 2: login + login (27/02/18: Lot 2 reaslised.) <br>
+Lot 2: register + login (27/02/18: Lot 2 reaslised.) <br>
 Lot 3: search engine + achievements <br>

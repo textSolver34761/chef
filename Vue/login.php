@@ -10,6 +10,7 @@
         <script type="text/javascript" src="style.js"></script>
     </head>
     <body>
+        <?php require('../Vue/entete.php');?>
         <div class="register">
             <h2>Login here</h2>
             <br>
@@ -26,5 +27,6 @@
                 <input type="submit" name="login" value="SIGN IN">
             </form>
         </div>
+        <?php require('../Vue/piedpage.php');?>
     </body>
 </html>
