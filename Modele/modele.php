@@ -29,7 +29,7 @@ function register(){
 			$pdo_statement->execute()
 		){
 			echo 'You have been successfully registred!';
-			header("location:require_once('Controleur/controleur-login.php')");
+			header("location:require_once('/index.php')");
 		}
 	}
 }
@@ -151,4 +151,14 @@ function Admin(){
 			exit();
 		}
 	}
+}
+
+function Blog(){
+	$todos = [];
+	$pdo = prepareStatement('SELECT titre, description, articles FROM blog');
+	$pdo->execute();
+
+	$todos = $pdo->fetchAll(PDO::FETCH_ASSOC);
+
+	return $todos;
 }

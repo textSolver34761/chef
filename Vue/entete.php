@@ -15,11 +15,11 @@ if(isset($_SESSION ['nom'])){
 <button onclick="goBack()">Go back </button>
 
 <!--div class="boutton"-->
-    <!--div class="left"--> <button> <a href="/Chef/index.php"> Home </button> <!--input class="ui big red button" type="button" value="Home"--></a> <!--/div--> 
+    <!--div class="left"--><button> <a href="/Chef/index.php"> Home </button> <!--input class="ui big red button" type="button" value="Home"--></a> <!--/div--> 
     <!--div class="right"--><button> <a href="/Chef/Vue/about.php">About me </button> <!--input class="ui big red button" type="button" value="About me"--></a><!--/div-->
     <!--div class="right"--><button> <a href="/Chef/Vue/contact.php">Contact </button><!--input class="ui big red button" type="button" value="Contact"--></a><!--/div-->
     <!--div class="right"--><button> <a href="/Chef/Controleur/controleur-blog.php">Blog </button><!--input class="ui big red button" type="button" value="Blog"--></a><!--/div-->
     <!--div class="right"--><button> <a href="/Chef/Controleur/controleur-login.php">Login</button> <!--input class="ui big red button" type="button" value="Sign in"--></a><!--/div-->
     <!--div class="right"--><button> <a href="/Chef/Controleur/controleur-registration.php">Register </button> <!--input class="ui big red button" type="button" value="Register"--></a><!--/div-->
-                            <button> <a href "/Chef/Vue/logout.php">Logout</a></button>
+    <!--div class="right"--><button> <a href="/Chef/Vue/logout.php">Logout </button><!--input class="ui big red button" type="button" value="Contact"--></a><!--/div-->
 </div>
