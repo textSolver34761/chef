@@ -19,9 +19,9 @@
             You'll find the link to the registration <a href="Controleur/controleur-registration.php"> here</a>.
         </p>
         <?php
-        if(isset($_SESSION['nom']) && 'role'==0 $$ 'role' == 1){
-            echo '<h2> Welcome '.$_SESSION [prenom]. [nom].' </h2>';
-            echo '<h2> Enjoy the tips and tutorials on this blog! </h2>';
+        if(isset($_SESSION['nom']) && 'role'== 0 $$ 'role' == 1){
+            echo '<h1> Welcome to my blog '.$_SESSION [prenom]. [nom].' ! </h1>';
+            echo '<h2> Enjoy the tips and tutorials of this blog! </h2>';
         }
         ?>
       <?php require('Vue/piedpage.php');?>
