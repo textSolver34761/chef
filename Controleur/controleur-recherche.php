@@ -2,6 +2,7 @@
 
 require __DIR__.'/../Modele/modele.php';
 
-$recherche = recherche();
+$recherche = Fetch();
+$recherche = Display();
 
 require __DIR__.'/../Vue/entete.php';
