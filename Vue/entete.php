@@ -23,3 +23,9 @@ if(isset($_SESSION ['nom'])){
     <!--div class="right"--><button> <a href="/Chef/Controleur/controleur-registration.php">Register </button> <!--input class="ui big red button" type="button" value="Register"--></a><!--/div-->
     <!--div class="right"--><button> <a href="/Chef/Vue/logout.php">Logout </button><!--input class="ui big red button" type="button" value="Contact"--></a><!--/div-->
 </div>
+<br>
+<br>
+<br>
+<form action="rechercher.php" method="Post">
+<input type="text" name="requete" size="50" placeholder="Ex: Laravel, tuto, chatbot">
+<input type="submit" value="Rechercher">

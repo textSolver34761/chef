@@ -22,8 +22,6 @@
           <?php else: ?>
             <h1> Welcome to my blog <?= $_SESSION ['nom'] ?> ! </h1>
             <h2> Enjoy the tips and tutorials of this blog! </h2>
-          <?php endif; ?>
-          
           <?php
           foreach ($blog as $ligne) {
           ?>
@@ -31,11 +29,13 @@
           <li>
             <?php echo $ligne['titre'].'<br>'; ?>
             <?php echo $ligne['description'].'<br>'; ?>
+            <?php echo $ligne['tag'].'<br>'; ?>
             <?php echo $ligne['articles'].'<br>'; ?>
           </li>
         <?php
           }
         ?>
+        <?php endif; ?>
       <?php require('../Vue/piedpage.php');?>
     <!--</div>-->
   </body>
