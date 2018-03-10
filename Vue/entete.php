@@ -28,7 +28,7 @@ if(isset($_SESSION ['nom'])){
 <br>
 <br>
 <br>
-<form method="post" action="controleur-recherche.php">
+<form method="post" action="/Chef/Controleur//controleur-recherche.php">
     <input type="text" name="keywords" size="50" placeholder="Ex: Laravel, tuto, chatbot">
     <input type="submit" name="recherche" value="Rechercher">
 </form>

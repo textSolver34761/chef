@@ -164,15 +164,19 @@ function Blog(){
 }
 
 function Fetch(){
-	if(isset($_POST['recherche'])){
-		$todosbin = [];
-		$pdo = prepareStatement('SELECT * FROM recherche WHERE recherche LIKE "%mysql%" ORDER BY');
-		$pdo->execute();
+	if(isset($_POST['recherche'])) {
 	
-		$todosbin = $pdo->fetchAll(PDO::FETCH_ASSOC);
+		$chainesearch = addslashes($_POST['recherche']);  
 	
-		return $todosbin;
-		exit();
+		echo 'Vous avez recherché : ' . $chainesearch . '<br>';
+			
+		$requete = prepareStatement("SELECT * FROM recherche WHERE recherche LIKE '". $chainesearch ."%'");
+		
+		$requete->execute();
+		echo 'Les résultats de recherche sont : <br>';     
+		while($donnees = $requete->fetch(PDO::FETCH_ASSOC)) {       
+		echo $donnees['recherche'] .'<br>';
+		}
 	}
 }
 

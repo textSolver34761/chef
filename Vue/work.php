@@ -23,15 +23,19 @@
             </div>
             <div class="glide__wrapper">
               <ul class="glide__track">
+              
                 <li class="glide__slide" data-glide-autoplay="1000">
                   <img src="http://placehold.it/350x150">
                 </li>
+              
                 <li class="glide__slide" data-glide-autoplay="3000">
                   <img src="http://placehold.it/350x150">
                 </li>
+              
                 <li class="glide__slide" data-glide-autoplay="5000">
                   <img src="http://placehold.it/350x150">
                 </li>
+              
               </ul>
             </div>
             <div class="glide__bullets"></div>
