@@ -15,7 +15,7 @@ if(isset($_SESSION ['nom'])){
 <button onclick="goBack()">Go back </button>
 
 <!--div class="boutton"-->
-    <!--div class="left"--><button> <a href="/Chef/index.php"> Home </button> <!--input class="ui big red button" type="button" value="Home"--></a> <!--/div--> 
+    <!--div class="left"--><button>  <a href="/Chef/index.php"> Home </button> <!--input class="ui big red button" type="button" value="Home"--></a> <!--/div--> 
     <!--div class="right"--><button> <a href="/Chef/Vue/about.php">About me </button> <!--input class="ui big red button" type="button" value="About me"--></a><!--/div-->
     <!--div class="right"--><button> <a href="/Chef/Vue/contact.php">Contact </button><!--input class="ui big red button" type="button" value="Contact"--></a><!--/div-->
     <!--div class="right"--><button> <a href="https://landbot.io/u/H-27113-GJVK3FFB9B71354C/index.html">Chat with me </button><!--input class="ui big red button" type="button" value="Chat"--></a><!--/div-->

@@ -1,0 +1,11 @@
+@media all and (max-width: 1024px){ /* ordinateurs */
+    body{
+        /**/
+    }
+}
+
+@media screen and (max-width : 1440px ) { /* smarthones */ 
+    body{
+         /**/
+    }
+}

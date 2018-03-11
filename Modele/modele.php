@@ -166,12 +166,17 @@ function Blog(){
 function Fetch(){
 	if(isset($_POST['recherche'])) {
 	
-		$chainesearch = addslashes($_POST['recherche']);  
+		$chainesearch = ($_POST['recherche']);// $chainesearch = saisie utilisateur (et non "Rechercher")
 	
 		echo 'Vous avez recherché : ' . $chainesearch . '<br>';
-			
-		$requete = prepareStatement("SELECT * FROM recherche WHERE recherche LIKE '". $chainesearch ."%'");
-		
+
+		$requete = prepareStatement("SELECT *
+									FROM recherche, tag, blog, projet
+									WHERE recherche.id = tag.recherches_lies
+									AND projet.id = tag.projet_lies
+									AND blog.id = tag.tuto_lies
+									LIKE '". $chainesearch ."%'");
+
 		$requete->execute();
 		echo 'Les résultats de recherche sont : <br>';     
 		while($donnees = $requete->fetch(PDO::FETCH_ASSOC)) {       
@@ -181,5 +186,5 @@ function Fetch(){
 }
 
 function Display(){
-	//
+	// Display search of search engine lien vers les pages
 }
