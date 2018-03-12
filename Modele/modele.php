@@ -163,23 +163,15 @@ function Blog(){
 	return $todos;
 }
 
-function Fetch(){
-	if(isset($_POST['recherche'])) {
-	
-		$chainesearch = ($_POST['keywords']);// $chainesearch = saisie utilisateur (et non "Rechercher")
+function Fetch($chainesearch){
+	$requete = prepareStatement("SELECT *
+								FROM recherche, tag, blog, projet
+								WHERE recherche.id = tag.recherches_lies
+								AND projet.id = tag.projet_lies
+								AND blog.id = tag.tuto_lies
+								LIKE '". $chainesearch ."%'");
 
-		$requete = prepareStatement("SELECT *
-									FROM recherche, tag, blog, projet
-									WHERE recherche.id = tag.recherches_lies
-									AND projet.id = tag.projet_lies
-									AND blog.id = tag.tuto_lies
-									LIKE '". $chainesearch ."%'");
-
-		$requete->execute();
-		$donnee = $requete->fetchAll();
-		}
-	}
-
-function Display(){
-	// Display search of search engine lien vers les pages
+	$requete->execute();
+	$donnee = $requete->fetchAll();
+	return $donnee;
 }
