@@ -14,6 +14,7 @@
   <body>
     <!--<div class="bgimg">-->
         <?php require('../Vue/entete.php');?>
+        <?php require('../Vue/recherche.php');?>
         <h1>You whant to know more about me?</h1>
         <h3> You are on the right place! </h3>
         <p>

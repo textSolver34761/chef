@@ -52,7 +52,7 @@ function login(){
 			$count = $pdo_statement->rowCount();
 			if($count > 0){
 				$_SESSION["nom"] = $_POST["nom"];
-				header("location:require_once('/Chef/Controleur/controleur-blog.php')");
+				header("location:require_once('/../../index.php/')");
 			}
 			else{
 				$message = '<label> Wrong data </label>';
@@ -166,9 +166,7 @@ function Blog(){
 function Fetch(){
 	if(isset($_POST['recherche'])) {
 	
-		$chainesearch = ($_POST['recherche']);// $chainesearch = saisie utilisateur (et non "Rechercher")
-	
-		echo 'Vous avez recherché : ' . $chainesearch . '<br>';
+		$chainesearch = ($_POST['keywords']);// $chainesearch = saisie utilisateur (et non "Rechercher")
 
 		$requete = prepareStatement("SELECT *
 									FROM recherche, tag, blog, projet
@@ -178,12 +176,9 @@ function Fetch(){
 									LIKE '". $chainesearch ."%'");
 
 		$requete->execute();
-		echo 'Les résultats de recherche sont : <br>';     
-		while($donnees = $requete->fetch(PDO::FETCH_ASSOC)) {       
-		echo $donnees['recherche'] .'<br>';
+		$donnee = $requete->fetchAll();
 		}
 	}
-}
 
 function Display(){
 	// Display search of search engine lien vers les pages

@@ -13,6 +13,7 @@
     </head>
   <body>
     <?php require('../Vue/entete.php');?>
+    <?php require('../Vue/recherche.php');?>
     <h1>Contact me </h1>
     <form method="post" action="https://formspree.io/pradonbenjamin@gmail.com">
 

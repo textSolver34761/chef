@@ -25,10 +25,4 @@ if(isset($_SESSION ['nom'])){
     <!--div class="right"--><button> <a href="/Chef/Controleur/controleur-registration.php">Register </button> <!--input class="ui big red button" type="button" value="Register"--></a><!--/div-->
     <!--div class="right"--><button> <a href="/Chef/Vue/logout.php">Logout </button><!--input class="ui big red button" type="button" value="Contact"--></a><!--/div-->    
 </div>
-<br>
-<br>
-<br>
-<form method="post" action="/Chef/Controleur//controleur-recherche.php">
-    <input type="text" name="keywords" size="50" placeholder="Ex: Laravel, tuto, chatbot">
-    <input type="submit" name="recherche" value="Rechercher">
-</form>
+

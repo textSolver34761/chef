@@ -14,6 +14,7 @@
   <body>
     <!--<div class="bgimg">-->
     <?php require('../Vue/entete.php');?>
+    <?php require('../Vue/recherche.php');?>
         <h1>This is my work</h1>
         <div class="module module--horizontal">
           <div id="Carousel" class="glide">

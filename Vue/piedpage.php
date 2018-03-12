@@ -3,9 +3,9 @@
     
     <p>
         Follow me on social networks: <br>
-        <button> <a href="https://www.twitter.com/benjamin_pradon">Twitter</button> </a>
-        <button> <a href="https://www.linkedin.com/in/benjaminpradon/">LinkedIn </button> </a>
-        <button> <a href="https://github.com/textSolver34761"> My Github deposite </button> </a> <br> <br>
+        <button> <a href="https://www.twitter.com/benjamin_pradon" target="_blank">Twitter</button> </a>
+        <button> <a href="https://www.linkedin.com/in/benjaminpradon/" target="_blank">LinkedIn </button> </a>
+        <button> <a href="https://github.com/textSolver34761" target="_blank"> My Github deposite </button> </a> <br> <br>
         <button> <a href="Vue/contact.php">Contact me </button> </a>
     </p>
     <p>

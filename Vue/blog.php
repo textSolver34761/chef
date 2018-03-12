@@ -14,6 +14,7 @@
   <body>
     <!--<div class="bgimg">-->
     <?php require('../Vue/entete.php');?>
+    <?php require('../Vue/recherche.php');?>
           <?php if(!isset($_SESSION['nom'])): ?>
             <h1> Welcome to my blog ! </h1>
             <h2> Tips, tutorials and more on chatbots, artificials intelligence </h2>

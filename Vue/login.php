@@ -13,6 +13,7 @@
     </head>
     <body>
         <?php require('../Vue/entete.php');?>
+        <?php require('../Vue/recherche.php');?>
         <div class="register">
             <h2>Login here</h2>
             <br>

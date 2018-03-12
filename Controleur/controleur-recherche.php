@@ -2,7 +2,7 @@
 
 require __DIR__.'/../Modele/modele.php';
 
-$recherche = Fetch();
+$chainesearch = Fetch();
 $recherche = Display();
 
-require __DIR__.'/../Vue/entete.php';
+require __DIR__.'/../Vue/recherche.php';

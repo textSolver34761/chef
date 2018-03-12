@@ -12,6 +12,7 @@
   <body>
     <!--<div class="bgimg">-->
     <?php require('Vue/entete.php');?>
+    <?php require('Vue/recherche.php');?>
         <h1>Welcome on my personal website</h1>
         <p>
           Hi, I'm Benjamin Pradon. <br>
