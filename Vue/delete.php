@@ -1,4 +1,4 @@
-<!--!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -6,29 +6,33 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="Style/semantic.css">
     <link rel="stylesheet" type="text/css" href="Style/style.css">
-    <title>Todo Liste</title>
+    <title>Delete an article</title>
 </head>
 <body>
     <div class="bgimg">
-        <?php require __DIR__.'../Vue/entete.php';?>
-        <br> 
+    <?php require('../Vue/entete.php');?>
+    <?php require('../Vue/recherche.php');?>
+        <h1>Delete the article:</h1>
         <br>
-        <br>
-        <br>
-        <h1>Modifiez votre todo liste:</h1>
-        <br>
-        <form action="" method="post">
+        <form action="/Chef/Controleur/controleur-delete.php" method="post">
         <div>
-            <label> Titre : <input type="text" name="title" value="<?php echo $tache['title']; ?>"> </label>
+            <h2><label> Title : <?php echo $delete['titre']; ?> </label></h2>
         </div>
 
         <div>
-            <input type="submit" value="Supprimer l'élément de votre todo liste">
+            <input type="submit" value="Delete the article">
         </div>
         </form>
         <br>
+        <?php
+        /*if(isset($_POST['submit'])){
+        echo"<script>"
+        echo"alert('Are you sur?')";
+        echo"</script>";
+        }*/
+        ?>
         <br>
-        <?php require __DIR__.'../Vue/pied_de_page.php';?>
     </div>
+    <?php require('../Vue/piedpage.php');?>
 </body>
 </html>

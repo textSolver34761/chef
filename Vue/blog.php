@@ -26,19 +26,17 @@
             <h1> Welcome to my blog <?= $_SESSION ['nom'] ?> ! </h1>
             <h2> Enjoy the tips and tutorials of this blog! </h2>
             <br>
-            <button> <a href="/Chef/Controleur/controleur-add.php"> Add </button> </a>
-            <button> <a href="/Chef/Controleur/controleur-edit.php"> Edit</button> </a>
-            <button> <a href="/Chef/Controleur/controleur-delete.php"> Delete </button> </a>
+            <button> <a href="/Chef/Controleur/controleur-add.php"> Add an article </button> </a>
             <br>
           <?php
           foreach ($blog as $ligne) {
           ?>
-          <li>
-            <?php echo $ligne['titre'].'<br>'; ?>
-            <?php echo $ligne['description'].'<br>'; ?>
-            <?php echo $ligne['tag'].'<br>'; ?>
-            <?php echo $ligne['contenu'].'<br>'; ?>
-          </li>
+          <br>
+          <button> <a href="/Chef/Controleur/controleur-edit/?<?php echo $ligne['id']; ?>"> Edit the article</button> </a>
+          <button> <a href="/Chef/Controleur/controleur-delete/?<?php echo $ligne['id']; ?>"> Delete the article </button> </a> <br>
+            <?php echo $ligne['titre'].'<br>'; ?><br>
+            <?php echo $ligne['description'].'<br>'; ?><br>
+            <?php echo $ligne['contenu'].'<br>'; ?> <br> <br>
         <?php
           }
         ?>

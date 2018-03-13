@@ -15,13 +15,13 @@
     <?php require('../Vue/entete.php');?>
     <?php require('../Vue/recherche.php');?>
     <h1> Add a new article </h1>
-    <form method="post" action="">
+    <form method="post" action="/Chef/Controleur/controleur-add.php">
         <p>
-            Title of the article * : <br> <input type="text" name="title" size="100" required />
+            Add a new title of the article * : <br> <input type="text" name="title" size="100" required />
         </p>
 
         <p>
-            Description of the article*: <br> <input type="text" name="description" size="250" required />
+            Add a new description of the article*: <br> <input type="text" name="description" size="250" required />
         </p>
 
         <!--p>
@@ -29,7 +29,7 @@
         </p-->
 
         <p>
-            Body text: <br> <textarea name="body" cols="600" rows="100"></textarea>
+            Add a new bBody text: <br> <textarea name="body" cols="600" rows="100"></textarea>
         </p>
 
         <!-- Ici pourra être ajouté un captcha anti-spam (plus tard) -->

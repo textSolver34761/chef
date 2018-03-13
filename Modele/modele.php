@@ -88,16 +88,17 @@ function Edit(){
 	if(isset($_POST['register']) && ('role'== 1)) {
 	$tache = [];
 	$pdo = prepareStatement('UPDATE article
-							SET titre=:titre, description=:description
+							SET titre=:titre, description=:description, contenu =:contenu
 							WHERE id=:id');
 	if(
 		$pdo_statement &&
 		$pdo_statement->bindParam(':id', $_GET['id']) &&
 		$pdo_statement->bindParam(':titre', $_GET['titre']) &&
 		$pdo_statement->bindParam(':description', $_GET['description']) &&
+		$pdo_statement->bindParam(':contenu', $_GET['contenu']) &&
 		$pdo_statement->execute()
 	){
-		echo "Vous avez bien mondifié l'article!";
+		echo "You have modified the article!";
 	}
 	return $tache;
 	}
@@ -121,16 +122,17 @@ function Add(){
 	if(isset($_POST['register']) && ('role'== 1)) {
 		if (isset($_POST['submit'])) {
 			$pdo_statement = prepareStatement(
-				'INSERT INTO article, tag(titre, description, contenu,)
+				'INSERT INTO article (titre, description, contenu,)
 				VALUES(:titre, :description, :contenu)');
-
+				
 			if(
 				$pdo_statement &&
 				$pdo_statement->bindParam(':titre', $_POST['titre']) &&
 				$pdo_statement->bindParam(':description', $_POST['description']) &&
 				$pdo_statement->bindParam(':contenu', $_POST['contenu']) &&
 				$pdo_statement->execute()
-			){
+			)
+			{
 				echo 'Vous avez bien ajouté une tâche!';
 			}
 		}
