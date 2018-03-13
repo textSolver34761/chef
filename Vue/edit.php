@@ -17,11 +17,11 @@
     <h1> Edit the article </h1>
     <form method="post" action="/Chef/Controleur/controleur-edit.php">
         <p>
-            Edit the title of the article * : <br> <input type="text" name="title" size="100" required />
+            Edit the title of the article : <br> <input type="text" name="title" size="100" />
         </p>
 
         <p>
-        Edit the description of the article*: <br> <input type="text" name="description" size="250" required />
+        Edit the description of the article: <br> <input type="text" name="description" size="250" />
         </p>
 
         <!--p>
@@ -32,16 +32,9 @@
             Edit the body text: <br> <textarea name="body" cols="600" rows="100"></textarea>
         </p>
 
-        <!-- Ici pourra être ajouté un captcha anti-spam (plus tard) -->
-
         <p>
             <input type="submit" name="submit" value="Edit" />
         </p>
-
-        <p>
-            Please, note that the field that have an asterisk (*) are required.
-        </p>
-
     </form>
     <?php require('../Vue/piedpage.php');?>
   </body>

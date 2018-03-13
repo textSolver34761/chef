@@ -16,9 +16,8 @@
         <br>
         <form action="/Chef/Controleur/controleur-delete.php" method="post">
         <div>
-            <h2><label> Title : <?php echo $delete['titre']; ?> </label></h2>
+            <h2><label> Title : <br> <?php echo $delete['titre']; ?> </label></h2>
         </div>
-
         <div>
             <input type="submit" value="Delete the article">
         </div>

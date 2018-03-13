@@ -62,7 +62,7 @@ function login(){
 }
 
 function Browse(){
-	if(isset($_POST['register']) && ('role'== 0) && ('role' == 1)) {
+	if(isset($_POST['register'])) if(('role'== 0) && ('role' == 1)) {
 	$todosBrowse = [];
 	$pdo = prepareStatement('SELECT * FROM article');
 	$pdo->execute();
@@ -73,7 +73,7 @@ function Browse(){
 }
 
 function Read() {
-	if(isset($_POST['register']) && ('role'== 0) && ('role' == 1)) {
+	if(isset($_POST['register'])) if(('role'== 0) && ('role' == 1)) {
 	$todoread = [];
 	$pdo = prepareStatement('SELECT * FROM article ORDER BY id DESC LIMIT 1');
 	$pdo->execute();
@@ -85,7 +85,7 @@ function Read() {
 }
 
 function Edit(){
-	if(isset($_POST['register']) && ('role'== 1)) {
+	if(isset($_POST['register'])) if('role'== 1) {
 	$tache = [];
 	$pdo = prepareStatement('UPDATE article
 							SET titre=:titre, description=:description, contenu =:contenu
@@ -105,7 +105,7 @@ function Edit(){
 }
 
 function Delete() {
-	if(isset($_POST['register']) && ('role'== 1)) {
+	if(isset($_POST['register'])) if('role'== 1) {
 		$todosbin = [];
 		$pdo = prepareStatement('UPDATE article ' . 'SET deleted_at=CURRENT_TIMESTAMP()');
 		$pdo->execute();
@@ -119,7 +119,7 @@ function Delete() {
 }
 
 function Add(){
-	if(isset($_POST['register']) && ('role'== 1)) {
+	if(isset($_POST['register'])) if('role'== 1) {
 		if (isset($_POST['submit'])) {
 			$pdo_statement = prepareStatement(
 				'INSERT INTO article (titre, description, contenu,)
