@@ -25,19 +25,24 @@
           <?php else: ?>
             <h1> Welcome to my blog <?= $_SESSION ['nom'] ?> ! </h1>
             <h2> Enjoy the tips and tutorials of this blog! </h2>
+            <br>
+            <button> <a href="/Chef/Controleur/controleur-add.php"> Add </button> </a>
+            <button> <a href="/Chef/Controleur/controleur-edit.php"> Edit</button> </a>
+            <button> <a href="/Chef/Controleur/controleur-delete.php"> Delete </button> </a>
+            <br>
           <?php
           foreach ($blog as $ligne) {
           ?>
-          
           <li>
             <?php echo $ligne['titre'].'<br>'; ?>
             <?php echo $ligne['description'].'<br>'; ?>
             <?php echo $ligne['tag'].'<br>'; ?>
-            <?php echo $ligne['articles'].'<br>'; ?>
+            <?php echo $ligne['contenu'].'<br>'; ?>
           </li>
         <?php
           }
         ?>
+        <br>
         <?php endif; ?>
       <?php require('../Vue/piedpage.php');?>
     <!--</div>-->

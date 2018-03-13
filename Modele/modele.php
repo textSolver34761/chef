@@ -17,7 +17,7 @@ function prepareStatement($sql) {
 function register(){
 	if(isset($_POST['register'])){
 	  $pdo_statement = prepareStatement(
-		'INSERT INTO utilisateurs(nom, prenom, email, motpasse)
+		'INSERT INTO utilisateur(nom, prenom, email, motpasse)
 		  VALUES(:nom, :prenom, :email, :motpasse)');
 
 		if(
@@ -41,7 +41,7 @@ function login(){
 			$message ='<label> All fields are required </label>';
 		}
 		else{
-			$query = "SELECT * FROM utilisateurs WHERE nom =:nom AND motpasse =:motpasse";
+			$query = "SELECT * FROM utilisateur WHERE nom =:nom AND motpasse =:motpasse";
 			$pdo_statement = prepareStatement($query);
 			$pdo_statement->execute(
 				array(
@@ -61,101 +61,86 @@ function login(){
 	}
 }
 
-function Admin(){
-	if(isset($_POST['register']) && ('role'== 0)){
+function Browse(){
+	if(isset($_POST['register']) && ('role'== 0) && ('role' == 1)) {
+	$todosBrowse = [];
+	$pdo = prepareStatement('SELECT * FROM article');
+	$pdo->execute();
+	
+	$todosBrowse = $pdo->fetchAll(PDO::FETCH_ASSOC);
+	return $todosBrowse;
+	}
+}
 
-		function Browse(){
-			$todosBrowse = [];
-			$pdo = prepareStatement('SELECT * FROM blog');
-			$pdo->execute();
-			
-			$todosBrowse = $pdo->fetchAll(PDO::FETCH_ASSOC);
-			return $todosBrowse;
-		}
+function Read() {
+	if(isset($_POST['register']) && ('role'== 0) && ('role' == 1)) {
+	$todoread = [];
+	$pdo = prepareStatement('SELECT * FROM article ORDER BY id DESC LIMIT 1');
+	$pdo->execute();
 
-		function Read() {
-			$todoread = [];
-			$pdo = prepareStatement('SELECT * FROM blog ORDER BY id DESC LIMIT 1');
-			$pdo->execute();
-		
-			$todoread = $pdo->fetchAll(PDO::FETCH_ASSOC);
-		
-			return $todoread;
-		}
+	$todoread = $pdo->fetchAll(PDO::FETCH_ASSOC);
 
-	} else{
+	return $todoread;
+	}
+}
 
-		function Browse(){
-			$todosBrowse = [];
-			$pdo = prepareStatement('SELECT * FROM blog');
-			$pdo->execute();
-			
-			$todosBrowse = $pdo->fetchAll(PDO::FETCH_ASSOC);
-			return $todosBrowse;
-		}
+function Edit(){
+	if(isset($_POST['register']) && ('role'== 1)) {
+	$tache = [];
+	$pdo = prepareStatement('UPDATE article
+							SET titre=:titre, description=:description
+							WHERE id=:id');
+	if(
+		$pdo_statement &&
+		$pdo_statement->bindParam(':id', $_GET['id']) &&
+		$pdo_statement->bindParam(':titre', $_GET['titre']) &&
+		$pdo_statement->bindParam(':description', $_GET['description']) &&
+		$pdo_statement->execute()
+	){
+		echo "Vous avez bien mondifié l'article!";
+	}
+	return $tache;
+	}
+}
 
-		function Read() {
-			$todoread = [];
-			$pdo = prepareStatement('SELECT * FROM blog ORDER BY id DESC LIMIT 1');
-			$pdo->execute();
-		
-			$todoread = $pdo->fetchAll(PDO::FETCH_ASSOC);
-		
-			return $todoread;
-		}
+function Delete() {
+	if(isset($_POST['register']) && ('role'== 1)) {
+		$todosbin = [];
+		$pdo = prepareStatement('UPDATE article ' . 'SET deleted_at=CURRENT_TIMESTAMP()');
+		$pdo->execute();
 
-		function Edit(){
-			$tache = [];
-			$pdo = prepareStatement('UPDATE blog
-									SET titre=:titre, description=:description
-									WHERE id=:id');
+		$todosbin = $pdo->fetchAll(PDO::FETCH_ASSOC);
+
+		return $todosbin;
+		header('Location: ../Vue/blog.php');
+		exit();
+	}
+}
+
+function Add(){
+	if(isset($_POST['register']) && ('role'== 1)) {
+		if (isset($_POST['submit'])) {
+			$pdo_statement = prepareStatement(
+				'INSERT INTO article, tag(titre, description, contenu,)
+				VALUES(:titre, :description, :contenu)');
+
 			if(
 				$pdo_statement &&
-				$pdo_statement->bindParam(':id', $_GET['id']) &&
-				$pdo_statement->bindParam(':titre', $_GET['titre']) &&
-				$pdo_statement->bindParam(':description', $_GET['description']) &&
+				$pdo_statement->bindParam(':titre', $_POST['titre']) &&
+				$pdo_statement->bindParam(':description', $_POST['description']) &&
+				$pdo_statement->bindParam(':contenu', $_POST['contenu']) &&
 				$pdo_statement->execute()
 			){
-				echo "Vous avez bien mondifié l'article!";
+				echo 'Vous avez bien ajouté une tâche!';
 			}
-			return $tache;
 		}
-
-		function Add(){
-			if (isset($_POST['submit'])) {
-				$pdo_statement = prepareStatement(
-					'INSERT INTO blog(titre, description)
-					VALUES(:title, :description)');
-		
-				if(
-					$pdo_statement &&
-					$pdo_statement->bindParam(':titre', $_POST['titre']) &&
-					$pdo_statement->bindParam(':description', $_POST['description']) &&
-					$pdo_statement->execute()
-				){
-					echo 'Vous avez bien ajouté un article!';
-				}
-			}
-			return $pdo_statement;
-		}
-
-		function Delete() {
-			$todosbin = [];
-			$pdo = prepareStatement('UPDATE blog ' . 'SET deleted_at=CURRENT_TIMESTAMP()');
-			$pdo->execute();
-		
-			$todosbin = $pdo->fetchAll(PDO::FETCH_ASSOC);
-		
-			return $todosbin;
-			header('Location: ../Vue/blog.php');
-			exit();
-		}
+		return $pdo_statement;
 	}
 }
 
 function Blog(){
 	$todos = [];
-	$pdo = prepareStatement('SELECT * FROM blog');
+	$pdo = prepareStatement('SELECT * FROM article');
 	$pdo->execute();
 
 	$todos = $pdo->fetchAll(PDO::FETCH_ASSOC);
