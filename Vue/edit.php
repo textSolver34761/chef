@@ -17,11 +17,11 @@
     <h1> Edit the article </h1>
     <form method="post" action="/Chef/Controleur/controleur-edit.php">
         <p>
-            Edit the title of the article : <br> <input type="text" name="title" size="100" />
+            Edit the title of the article : <br> <input type="text" name="title" size="100" <!--value="<?#php $article['titre'] ?>"-->/>
         </p>
 
         <p>
-        Edit the description of the article: <br> <input type="text" name="description" size="250" />
+            Edit the description of the article: <br> <input type="text" name="description" size="250" <!--value="<?#php $article['titre'] ?>"-->/>
         </p>
 
         <!--p>
@@ -29,7 +29,7 @@
         </p-->
 
         <p>
-            Edit the body text: <br> <textarea name="body" cols="600" rows="100"></textarea>
+            Edit the body text: <br> <textarea name="contenu" cols="600" rows="100"<!--value="<?#php $article['titre'] ?>"--></textarea>
         </p>
 
         <p>

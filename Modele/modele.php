@@ -38,7 +38,6 @@ function login(){
 	session_start();
 	if(isset($_POST['login'])){
 		if(empty($_POST["nom"]) || empty($_POST["motpasse"])){
-			$message ='<label> All fields are required </label>';
 		}
 		else{
 			$query = "SELECT * FROM utilisateur WHERE nom =:nom AND motpasse =:motpasse";
@@ -46,16 +45,13 @@ function login(){
 			$pdo_statement->execute(
 				array(
 					'nom' => $_POST["nom"],
-					'motpasse' => $_POST["motpasse"]
+					'motpasse' => $_POST["motpasse"],
 				)
 			);
 			$count = $pdo_statement->rowCount();
 			if($count > 0){
 				$_SESSION["nom"] = $_POST["nom"];
 				header("location:require_once('/../../index.php/')");
-			}
-			else{
-				$message = '<label> Wrong data </label>';
 			}
 		}
 	}
@@ -85,59 +81,58 @@ function Read() {
 }
 
 function Edit(){
-	if(isset($_POST['register'])) if('role'== 1) {
-	$tache = [];
-	$pdo = prepareStatement('UPDATE article
-							SET titre=:titre, description=:description, contenu =:contenu
-							WHERE id=:id');
-	if(
-		$pdo_statement &&
-		$pdo_statement->bindParam(':id', $_GET['id']) &&
-		$pdo_statement->bindParam(':titre', $_GET['titre']) &&
-		$pdo_statement->bindParam(':description', $_GET['description']) &&
-		$pdo_statement->bindParam(':contenu', $_GET['contenu']) &&
-		$pdo_statement->execute()
-	){
-		echo "You have modified the article!";
-	}
-	return $tache;
-	}
+	//if(isset($_POST['register'])) if('role'== 1) {
+		$tache = [];
+		$pdo_statement = prepareStatement('UPDATE article
+								SET titre=:titre, description=:description, contenu =:contenu
+								WHERE id=:id');
+		//if(
+		//	$pdo_statement &&
+			$pdo_statement->bindParam(':id', $_GET['id']);
+			$pdo_statement->bindParam(':titre', $_GET['titre']);
+			$pdo_statement->bindParam(':description', $_GET['description']);
+			$pdo_statement->bindParam(':contenu', $_GET['contenu']);
+			$pdo_statement->execute();
+		//)
+		return true;
+	//}
 }
 
 function Delete() {
-	if(isset($_POST['register'])) if('role'== 1) {
-		$todosbin = [];
-		$pdo = prepareStatement('UPDATE article ' . 'SET deleted_at=CURRENT_TIMESTAMP()');
-		$pdo->execute();
+	//if(isset($_POST['register'])) if('role'== 1) {
+		if (isset($_POST['submit'])) {
+			$todosbin = [];
+			$pdo = prepareStatement('UPDATE article ' . 'SET deleted_at=CURRENT_TIMESTAMP()');
+			$pdo->execute();
 
-		$todosbin = $pdo->fetchAll(PDO::FETCH_ASSOC);
+			$todosbin = $pdo->fetchAll(PDO::FETCH_ASSOC);
 
-		return $todosbin;
-		header('Location: ../Vue/blog.php');
-		exit();
-	}
+			return true;
+		}
+	//}
 }
 
 function Add(){
-	if(isset($_POST['register'])) if('role'== 1) {
+	//if(isset($_POST['register'])) if('role'== 1) {
+	
 		if (isset($_POST['submit'])) {
+
 			$pdo_statement = prepareStatement(
-				'INSERT INTO article (titre, description, contenu,)
-				VALUES(:titre, :description, :contenu)');
+				'INSERT INTO article (titre, description, contenu)
+				VALUES (:titre, :description, :contenu)');
 				
-			if(
-				$pdo_statement &&
-				$pdo_statement->bindParam(':titre', $_POST['titre']) &&
-				$pdo_statement->bindParam(':description', $_POST['description']) &&
-				$pdo_statement->bindParam(':contenu', $_POST['contenu']) &&
-				$pdo_statement->execute()
-			)
-			{
-				echo 'Vous avez bien ajouté une tâche!';
-			}
+			//if(
+			//	$pdo_statement &&
+				$pdo_statement->bindParam(':titre', $_POST['titre']);
+				$pdo_statement->bindParam(':description', $_POST['description']);
+				$pdo_statement->bindParam(':contenu', $_POST['contenu']);
+				$pdo_statement->execute();
+			//)
+
+			return true;
 		}
-		return $pdo_statement;
-	}
+		
+	//}
 }
 
 function Blog(){

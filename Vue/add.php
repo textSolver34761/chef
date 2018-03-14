@@ -7,8 +7,6 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" type="text/css" href="Style/style.css">
         <link rel="stylesheet" type="text/css" href="Style/semantic.css">
-        <link rel="stylesheet" href="Style/glide.core.css">
-        <link rel="stylesheet" href="Style/glide.theme.css">
         <script type="text/javascript" src="Style/style.js"></script>
     </head>
   <body>
@@ -17,11 +15,11 @@
     <h1> Add a new article </h1>
     <form method="post" action="/Chef/Controleur/controleur-add.php">
         <p>
-            Add a new title of the article * : <br> <input type="text" name="title" size="100" required />
+            Add a title to the new article * : <br> <input type="text" name="titre" size="100" required />
         </p>
 
         <p>
-            Add a new description of the article*: <br> <input type="text" name="description" size="250" required />
+            Add a description to the article*: <br> <input type="text" name="description" size="250" required />
         </p>
 
         <!--p>
@@ -29,7 +27,7 @@
         </p-->
 
         <p>
-            Add a new bBody text: <br> <textarea name="body" cols="600" rows="100"></textarea>
+            Add a new body text: <br> <textarea name="contenu" cols="600" rows="100"></textarea>
         </p>
 
         <!-- Ici pourra être ajouté un captcha anti-spam (plus tard) -->

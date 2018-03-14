@@ -8,15 +8,17 @@ if (
     isset($_POST['description']) OR
     isset($_POST['contenu'])
 ){
-    $tache = Edit();
+    $edit = Edit();
 
     // si la création a réussi,
-    if ($tache) {
-        // rediriger vers
-        header('Location: edit_1.php');
-    }
+    if ($edit) {
+        //rediriger vers
+       header('location: /Chef/Controleur/controleur-blog.php');
+       echo "You have edit an article!";
+   }
 }
 else {
-    // afficher le formulaire
-    require __DIR__.'/../Vue/edit.php';
+   // afficher le formulaire
+   require __DIR__.'/../Vue/edit.php';
+   echo "Error. Please try again.";
 }
