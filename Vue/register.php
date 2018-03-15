@@ -20,6 +20,9 @@
                 <input type="text" name="nom" placeholder="your name" required > <br>
                 <input type="text" name="email" placeholder="example@example.com"required> <br>
                 <input type="password" name="motpasse"  placeholder="************" required> <br>
+                <input type="hidden" name="MAX_FILE_SIZE" value="250000" />
+                Select a file for your avatar: <br>
+                <input type="file" name="fic" size=50 /> <br> <br>
                 <input type="submit" name="register" value="REGISTER NOW">
             </form>
         </div>

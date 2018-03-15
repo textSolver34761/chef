@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="/Chef/Style/semantic.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/css/bootstrap-slider.min.css">
     <script type="text/javascript" src="/Chef/Style/style.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/bootstrap-slider.min.js"></script>
     <title>My work</title>
   </head>
   <body>

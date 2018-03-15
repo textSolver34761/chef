@@ -14,8 +14,7 @@ if(isset($_SESSION ['nom'])){
 <br>
 <a class="ui image label">
   <!--img src="/Chef/Ressources/Avatar/PhotoID.jpg"-->
-  <?=$_SESSION['nom'];
-  ?>
+  <?=$_SESSION['nom']; ?>
 </a>
 
 <hr>
