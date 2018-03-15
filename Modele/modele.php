@@ -119,8 +119,6 @@ function Delete() {
 			$pdo_statement->bindParam(':id', $_GET['id']);
 			$pdo_statement->execute();
 			$pdo_statement->fetchAll(PDO::FETCH_ASSOC);
-			
-			var_dump($_POST['submit']);
 			return true;
 		}
 	//}

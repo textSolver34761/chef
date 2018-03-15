@@ -23,3 +23,5 @@ function prewImage(){
     }
     slider_content.innerHTML ="<img scr="+image[i-1]+".jpg>";
 }
+
+setInterval(nextImage,1000);
