@@ -5,9 +5,9 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" type="text/css" href="Style/style.css">
-        <link rel="stylesheet" type="text/css" href="Style/semantic.css">
-        <script type="text/javascript" src="Style/style.js"></script>
+        <link rel="stylesheet" type="text/css" href="/Chef/Style/style.css">
+        <link rel="stylesheet" type="text/css" href="/Chef/Style/semantic.css">
+        <script type="text/javascript" src="/Chef/Style/style.js"></script>
     </head>
   <body>
     <?php require('../Vue/entete.php');?>
