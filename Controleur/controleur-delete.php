@@ -3,6 +3,7 @@
 require __DIR__.'/../Modele/modele.php';
 
 $delete = Delete();
+$article = Article();
 
 if ($delete) {
     //rediriger vers

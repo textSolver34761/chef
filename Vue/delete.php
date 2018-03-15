@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="Style/semantic.css">
-    <link rel="stylesheet" type="text/css" href="Style/style.css">
+    <link rel="stylesheet" type="text/css" href="/Chef/Style/style.css">
     <title>Delete an article</title>
 </head>
 <body>
@@ -21,7 +21,7 @@
             </h2>
         </div>
         <div>
-            <input type="submit" value="Delete the article">
+            <input type="submit" name="submit" value="Delete the article">
         </div>
         </form>
         <br>

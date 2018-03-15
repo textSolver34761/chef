@@ -115,11 +115,12 @@ function Article(){
 function Delete() {
 	//if(isset($_POST['register'])) if('role'== 1) {
 		if (isset($_POST['submit'])) {
-			$todosbin = [];
 			$pdo_statement = prepareStatement('DELETE FROM article WHERE  id =:id');
 			$pdo_statement->bindParam(':id', $_GET['id']);
 			$pdo_statement->execute();
 			$pdo_statement->fetchAll(PDO::FETCH_ASSOC);
+			
+			var_dump($_POST['submit']);
 			return true;
 		}
 	//}
