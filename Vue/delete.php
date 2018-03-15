@@ -14,9 +14,11 @@
     <?php require('../Vue/recherche.php');?>
         <h1>Delete the article:</h1>
         <br>
-        <form action="/Chef/Controleur/controleur-delete.php" method="post">
+        <form action="/Chef/Controleur/controleur-delete.php?id=<?= $article['id'] ?>" method="post">
         <div>
-            <h2><label> Title : <br> <?php echo $delete['titre']; ?> </label></h2>
+            <h2>
+                <label> Title : <br> <?= $article['titre'] ?></label>
+            </h2>
         </div>
         <div>
             <input type="submit" value="Delete the article">

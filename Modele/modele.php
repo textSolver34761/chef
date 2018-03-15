@@ -71,7 +71,7 @@ function Browse(){
 function Read() {
 	if(isset($_POST['register'])) if(('role'== 0) && ('role' == 1)) {
 	$todoread = [];
-	$pdo = prepareStatement('SELECT * FROM article ORDER BY id DESC LIMIT 1');
+	$pdo = prepareStatement('SELECT * FROM article ORDER BY id DESC LIMIT 100');
 	$pdo->execute();
 
 	$todoread = $pdo->fetchAll(PDO::FETCH_ASSOC);
@@ -81,32 +81,45 @@ function Read() {
 }
 
 function Edit(){
+	//var_dump($_GET['id'], $_POST['titre'], $_POST['description'], $_POST['contenu']);
+
 	//if(isset($_POST['register'])) if('role'== 1) {
-		$tache = [];
 		$pdo_statement = prepareStatement('UPDATE article
-								SET titre=:titre, description=:description, contenu =:contenu
-								WHERE id=:id');
-		//if(
-		//	$pdo_statement &&
+											SET titre=:titre, description=:description, contenu =:contenu
+											WHERE id=:id');
+		
+		
 			$pdo_statement->bindParam(':id', $_GET['id']);
-			$pdo_statement->bindParam(':titre', $_GET['titre']);
-			$pdo_statement->bindParam(':description', $_GET['description']);
-			$pdo_statement->bindParam(':contenu', $_GET['contenu']);
+			$pdo_statement->bindParam(':titre', $_POST['titre']);
+			$pdo_statement->bindParam(':description', $_POST['description']);
+			$pdo_statement->bindParam(':contenu', $_POST['contenu']);
 			$pdo_statement->execute();
-		//)
+
+			
+
 		return true;
 	//}
+}
+
+
+function Article(){
+    if(isset($_GET['id'])) {
+        $sql = "SELECT * FROM article WHERE id = :id";
+        $article = prepareStatement($sql);       
+        $article->bindParam(':id', $_GET['id']);
+        $article->execute();
+        return $article->fetch();
+    }
 }
 
 function Delete() {
 	//if(isset($_POST['register'])) if('role'== 1) {
 		if (isset($_POST['submit'])) {
 			$todosbin = [];
-			$pdo = prepareStatement('UPDATE article ' . 'SET deleted_at=CURRENT_TIMESTAMP()');
-			$pdo->execute();
-
-			$todosbin = $pdo->fetchAll(PDO::FETCH_ASSOC);
-
+			$pdo_statement = prepareStatement('DELETE FROM article WHERE  id =:id');
+			$pdo_statement->bindParam(':id', $_GET['id']);
+			$pdo_statement->execute();
+			$pdo_statement->fetchAll(PDO::FETCH_ASSOC);
 			return true;
 		}
 	//}

@@ -32,11 +32,11 @@
           foreach ($blog as $ligne) {
           ?>
           <br>
-          <button> <a href="/Chef/Controleur/controleur-edit/?id=<?php echo $ligne["id"]; ?>"> Edit the article</button> </a>
-          <button> <a href="/Chef/Controleur/controleur-delete/?id=<?php echo $ligne["id"]; ?>"> Delete the article </button> </a> <br>
+          <button> <a href="/Chef/Controleur/controleur-edit?id=<?php echo $ligne["id"]; ?>"> Edit the article</button> </a>
+          <button> <a href="/Chef/Controleur/controleur-delete?id=<?php echo $ligne["id"]; ?>"> Delete the article </button> </a> <br>
             <?php echo $ligne['titre'].'<br>'; ?><br>
             <?php echo $ligne['description'].'<br>'; ?><br>
-            <?php echo $ligne['contenu'].'<br>'; ?> <br> <br> <!--> créer un template : https://openclassrooms.com/courses/adoptez-une-architecture-mvc-en-php/creer-un-template-de-page !-->
+            <?php echo $ligne['contenu'].'<br>'; ?> <br> <br> <!-- créer un template : https://openclassrooms.com/courses/adoptez-une-architecture-mvc-en-php/creer-un-template-de-page !-->
         <?php
           }
         ?>

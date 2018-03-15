@@ -2,12 +2,10 @@
 
 require __DIR__.'/../Modele/modele.php';
 
+$article = Article();
+
 // si je reçois des données de formulaire,
-if (
-    isset($_POST['titre']) OR
-    isset($_POST['description']) OR
-    isset($_POST['contenu'])
-){
+if (isset($_POST['titre'], $_POST['description'], $_POST['contenu'])){
     $edit = Edit();
 
     // si la création a réussi,
