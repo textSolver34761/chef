@@ -15,17 +15,17 @@ if(isset($_SESSION ['nom'])){
 </a>
 
 <hr>
-<button class="ui big red button" onclick="goBack()">Go back </button>
+<button class="ui small #B8C7C6 button" onclick="goBack()">Go back </button>
 
 <!--div class="boutton"-->
-    <!--div class="left"--><button class="ui big red button">  <a href="/Chef/index.php"> Home </button> <!--input type="button" value="Home"--></a> <!--/div--> 
-    <!--div class="right"--><button class="ui big red button"> <a href="/Chef/Vue/about.php">About me </button> <!--input class="ui big red button" type="button" value="About me"--></a><!--/div-->
-    <!--div class="right"--><button class="ui big red button"> <a href="/Chef/Vue/contact.php">Contact </button><!--input class="ui big red button" type="button" value="Contact"--></a><!--/div-->
-    <!--div class="right"--><button class="ui big red button"> <a href="https://landbot.io/u/H-27113-GJVK3FFB9B71354C/index.html">Chat with me </button><!--input class="ui big red button" type="button" value="Chat"--></a><!--/div-->
-    <!--div class="right"--><button class="ui big red button"> <a href="/Chef/Controleur/controleur-blog.php">Blog </button><!--input class="ui big red button" type="button" value="Blog"--></a><!--/div-->
-    <!--div class="right"--><button class="ui big red button"> <a href="/Chef/Controleur/controleur-work.php">My work </button><!--input class="ui big red button" type="button" value="Blog"--></a><!--/div-->
-    <!--div class="right"--><button class="ui big red button"> <a href="/Chef/Controleur/controleur-login.php">Login</button> <!--input class="ui big red button" type="button" value="Sign in"--></a><!--/div-->
-    <!--div class="right"--><button class="ui big red button"> <a href="/Chef/Controleur/controleur-registration.php">Register </button> <!--input class="ui big red button" type="button" value="Register"--></a><!--/div-->
-    <!--div class="right"--><button class="ui big red button"> <a href="/Chef/Vue/logout.php">Logout </button><!--input class="ui big red button" type="button" value="Contact"--></a><!--/div-->    
+    <!--div class="left"--> <button class="ui small #B8C7C6 button">  <a href="/Chef/index.php"> Home </button> <!--input type="button" value="Home"--></a> <!--/div--> 
+    <!--div class="right"--><button class="ui small #B8C7C6 button"> <a href="/Chef/Vue/about.php">About me </button> <!--input class="ui big red button" type="button" value="About me"--></a><!--/div-->
+    <!--div class="right"--><button class="ui small #B8C7C6 button"> <a href="/Chef/Vue/contact.php">Contact </button><!--input class="ui big red button" type="button" value="Contact"--></a><!--/div-->
+    <!--div class="right"--><button class="ui small #B8C7C6 button"> <a href="https://landbot.io/u/H-27113-GJVK3FFB9B71354C/index.html">Chat with me </button><!--input class="ui big red button" type="button" value="Chat"--></a><!--/div-->
+    <!--div class="right"--><button class="ui small #B8C7C6 button"> <a href="/Chef/Controleur/controleur-blog.php">Blog </button><!--input class="ui big red button" type="button" value="Blog"--></a><!--/div-->
+    <!--div class="right"--><button class="ui small #B8C7C6 button"> <a href="/Chef/Controleur/controleur-work.php">My work </button><!--input class="ui big red button" type="button" value="Blog"--></a><!--/div-->
+    <!--div class="right"--><button class="ui small #B8C7C6 button"> <a href="/Chef/Controleur/controleur-login.php">Login</button> <!--input class="ui big red button" type="button" value="Sign in"--></a><!--/div-->
+    <!--div class="right"--><button class="ui small #B8C7C6 button"> <a href="/Chef/Controleur/controleur-registration.php">Register </button> <!--input class="ui big red button" type="button" value="Register"--></a><!--/div-->
+    <!--div class="right"--><button class="ui small #B8C7C6 button"> <a href="/Chef/Vue/logout.php">Logout </button><!--input class="ui big red button" type="button" value="Contact"--></a><!--/div-->    
 </div>
 

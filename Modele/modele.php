@@ -159,10 +159,7 @@ function Blog(){
 
 function Fetch($chainesearch){
 	$requete = prepareStatement("SELECT *
-								FROM recherche, tag, blog, projet
-								WHERE recherche.id = tag.recherches_lies
-								AND projet.id = tag.projet_lies
-								AND blog.id = tag.tuto_lies
+								FROM article
 								LIKE '". $chainesearch ."%'");
 
 	$requete->execute();
