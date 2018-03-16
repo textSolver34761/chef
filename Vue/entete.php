@@ -5,15 +5,12 @@ echo date('l jS \of F Y h:i:s A');
 
 if(isset($_SESSION ['nom'])){
     echo '<h2> Welcome '.$_SESSION ['nom'].'</h2>';
-    if('role'== 1){
-        echo 'You are connected as an admin!';
-    }
 }
 ?>
 <br>
 <br>
 <a class="ui image label">
-  <!--img src="/Chef/Ressources/Avatar/PhotoID.jpg"-->
+  <img src="/Chef/Ressources/Avatar/default.png"
   <?=$_SESSION['nom']; ?>
 </a>
 
