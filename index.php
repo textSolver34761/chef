@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="Style/semantic.css">
-    <link rel="stylesheet" type="text/css" href="Style/style.css">
-    <script type="text/javascript" src="style.js"></script>
+    <link rel="stylesheet" type="text/css" href="/Chef/Style/semantic.css">
+    <link rel="stylesheet" type="text/css" href="/Chef/Style/style.css">
+    <script type="text/javascript" src="/Chef/Style/style.js"></script>
     <title>Home page</title>
   </head>
   <body>
@@ -21,7 +21,7 @@
             <img src="/Chef/Ressources/Avatar/PhotoID.jpg">
             </a>
             <div class="content">
-              <a class="header">Hi, I'm Benjamin Pradon.</a>
+              <a class="header">Hi, I'm Benjamin Pradon</a>
               <div class="description">
               <p>
                   This is my personal website. <br>
