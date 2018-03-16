@@ -27,13 +27,13 @@
           
           <div class="carousel-inner" role="listbox">
             <div class="carousel-item active">
-                <img class="d-block w-100 img-fluid" src="/Chef/Ressources/Caroussel/laravel.png" alt="First slide">
+                <img class="d-block w-100 img-fluid" src="/Chef/Ressources/Caroussel/laravel.png" alt="First slide" height="150" width="150">
                   <h5>This the work I have been doing on laravel</h5>
                   <p>My github link: www.github.com/opkij</p>
             </div>
             <br>
             <div class="carousel-item">
-                <img class="d-block w-100 img-fluid" src="/Chef/Ressources/Caroussel/php.png" alt="Second slide">
+                <img class="d-block w-100 img-fluid" src="/Chef/Ressources/Caroussel/php.png" alt="Second slide" height="150" width="150">
                   <h5>This the work I have been doing on PHP native</h5>
                   <p>My github link : www.github.com/tpo</p>
             </div>
