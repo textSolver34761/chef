@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="/Chef/Style/style.css">
     <link rel="stylesheet" type="text/css" href="/Chef/Style/semantic.css">
+    <link rel="stylesheet" type="text/css" href="/Chef/Style/style.css">
     <script type="text/javascript" src="/Chef/Style/style.js"></script>
     <title>Blog</title>
   </head>
@@ -18,7 +18,7 @@
             <h2> Tips, tutorials and more on chatbots, artificials intelligence </h2>
             <p>
               To access the blog, please register yourself <br>
-              You'll find the link to the registration <a href="Controleur/controleur-registration.php"> here</a>.
+              You'll find the link to the registration <a href="/Chef/Controleur/controleur-registration.php"> here</a> or you can login  <a href="/Chef/Controleur/controleur-login.php"> here</a>.
             </p>
           <?php else: ?>
             <h1> Welcome to my blog <?= $_SESSION ['nom'] ?> ! </h1>

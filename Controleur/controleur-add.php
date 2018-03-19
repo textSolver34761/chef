@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require __DIR__.'/../Modele/modele.php';
 
 // si je reçois des données de formulaire,

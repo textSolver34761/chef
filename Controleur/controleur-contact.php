@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require __DIR__.'/Modele/modele.php';
 
 $contact = fetchData();
