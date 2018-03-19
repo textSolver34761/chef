@@ -16,7 +16,7 @@
     <!--<div class="bgimg">-->
     <?php require('../Vue/entete.php');?>
     <?php require('../Vue/recherche.php');?>
-        <h1>This is my work</h1>
+        <h1 class="center">This is my work</h1>
         
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
           

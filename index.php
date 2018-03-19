@@ -14,7 +14,7 @@
     <!--<div class="bgimg">-->
     <?php require('Vue/entete.php');?>
     <?php require('Vue/recherche.php');?>
-        <h1>Welcome on my personal website</h1>
+        <h1 class="center">Welcome on my personal website</h1>
         <br>
         <div class="ui items">
           <div class="item">

@@ -14,8 +14,9 @@
     <!--<div class="bgimg">-->
         <?php require('../Vue/entete.php');?>
         <?php require('../Vue/recherche.php');?>
-        <h1>You whant to know more about me?</h1>
-        <h3> You are on the right place! </h3>
+        <h1 class="center">You whant to know more about me?</h1> <br>
+        <h3 class="center"> You are on the right place! </h3>
+        <br>
         <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tempus pellentesque odio, at efficitur urna. Pellentesque dictum interdum elit, eget pharetra orci faucibus quis. Aenean justo dolor, gravida sit amet sodales non, vehicula a augue. Nunc sodales non tellus id pulvinar. Duis aliquet tellus at augue volutpat, at eleifend lacus ornare. Nam malesuada vestibulum turpis quis faucibus. Donec volutpat eros at nibh porttitor sodales id non urna. Duis ultrices risus a efficitur vestibulum. Donec at bibendum nisl, vel iaculis nulla. Nunc nibh metus, dapibus tempus blandit eget, mattis in est. Nam suscipit, turpis nec maximus maximus, mauris metus porttitor erat, eu commodo ex massa sit amet orci.
         </p>
