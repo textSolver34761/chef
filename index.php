@@ -27,10 +27,10 @@
               <p>
                   This is my personal website. <br>
                   I am a web developer. If you want to know more about me, you'll find more information <a href="Vue/about.php"> here</a>.<br>
-                  Feel free to <a href="Vue/contact.php"> contact me</a>. <br>
+                  Feel free to<a href="Vue/contact.php">contact me</a>.<br>
                   Because I am really interested in working in Artificial Intelligence, I made a chatbot that you can find <a href="https://landbot.io/u/H-27113-GJVK3FFB9B71354C/index.html"> here </a>. <br>
                   Finnally, I give some tips on how to build a chatbot.<br>
-                  If you want to have a closer look, feel free to <a href="/Chef/Controleur/controleur-registration.php">register </a> and have a look at my <a href="/Chef/Controleur/controleur-blog.php">blog </a>, or you can have a look at my <a href="/Chef/Controleur/controleur-work.php">work</a>.
+                  If you want to have a closer look, feel free to<a href="/Chef/Controleur/controleur-registration.php">register </a> and have a look at my <a href="/Chef/Controleur/controleur-blog.php">blog </a>, or you can have a look at my <a href="/Chef/Controleur/controleur-work.php">work</a>.
                 </p>
               </div>
             </div>
