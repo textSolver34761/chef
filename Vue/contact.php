@@ -51,7 +51,7 @@
       
         <fieldset>
           <label for="company">What company do you work for?</label> <br>
-          <input cf-questions="Which company are you with?" type="text" class="form-control" name="company" id="company">
+          <input cf-questions="WOW ... {previous-answer} i'm impressed ! Which company are you with?" type="text" class="form-control" name="company" id="company">
         </fieldset>
       
         <fieldset>
