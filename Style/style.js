@@ -12,4 +12,5 @@ var conversationalForm = window.cf.ConversationalForm.startTheConversation({
     //alert(
     //  "Custom submit callback reached, removing Conversational Form, see markup of this file"
     //);
-  });
+  }
+);
