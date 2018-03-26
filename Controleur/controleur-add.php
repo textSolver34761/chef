@@ -17,6 +17,9 @@ if (isset($_POST['titre'], $_POST['description'], $_POST['contenu'])
 }
 else {
     // afficher le formulaire
+    require __DIR__.'/Controleur/controleur-entete.php';
+    require __DIR__.'/Controleur/controleur-recherche.php';    
     require __DIR__.'/../Vue/add.php';
     echo "Error. Please try again.";
+    require __DIR__.'/Controleur/controleur_piedpage.php';
 }

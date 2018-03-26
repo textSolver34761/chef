@@ -11,6 +11,9 @@ if ($delete) {
 }
 else {
     // afficher le formulaire
+    require __DIR__.'/Controleur/controleur-entete.php';
+    require __DIR__.'/Controleur/controleur-recherche.php';   
     require __DIR__.'/../Vue/delete.php';
     echo "Error. Please try again.";
+    require __DIR__.'/Controleur/controleur_piedpage.php';
 }

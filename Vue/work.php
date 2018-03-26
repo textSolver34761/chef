@@ -14,8 +14,6 @@
   </head>
   <body>
     <!--<div class="bgimg">-->
-    <?php require('../Vue/entete.php');?>
-    <?php require('../Vue/recherche.php');?>
         <h1 class="center">This is my work</h1>
         
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -23,18 +21,32 @@
           <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
           </ol>
           
           <div class="carousel-inner" role="listbox">
-            <div class="carousel-item active">
-                <img class="d-block w-100 img-fluid" src="/Chef/Ressources/Caroussel/laravel.png" alt="First slide" height="150" width="150">
+            <div class="carousel-item active"> 
+                <img class="d-block w-100 img-fluid" src="/Chef/Ressources/Caroussel/php.png" height="150" width="150">
                   <h5>This the work I have been doing on laravel</h5>
                   <p>My github link: www.github.com/opkij</p>
             </div>
             <br>
             <div class="carousel-item">
-                <img class="d-block w-100 img-fluid" src="/Chef/Ressources/Caroussel/php.png" alt="Second slide" height="150" width="150">
+                <img class="d-block w-100 img-fluid" src="/Chef/Ressources/Caroussel/laravel.png" height="150" width="150">
                   <h5>This the work I have been doing on PHP native</h5>
+                  <p>My github link : www.github.com/tpo</p>
+            </div>
+            <br>
+            <div class="carousel-item">
+                <img class="d-block w-100 img-fluid" src="/Chef/Ressources/Caroussel/laravel_et_vuejs.png" height="150" width="150">
+                  <h5>This the work I have been doing on PHP native</h5>
+                  <p>My github link : www.github.com/tpo</p>
+            </div>
+            <br>
+            <div class="carousel-item">
+                <img class="d-block w-100 img-fluid" src="/Chef/Ressources/Caroussel/symfony.png" height="150" width="150">
+                  <h5>This the work I have been doing on symfony</h5>
                   <p>My github link : www.github.com/tpo</p>
             </div>
 
@@ -51,7 +63,6 @@
           </a>
 
         </div> 
-      <?php require('../Vue/piedpage.php');?>
     <!--</div>-->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

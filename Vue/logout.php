@@ -1,5 +1,5 @@
 <?php
 session_start();
 session_destroy();
-header("location:/Chef/index.php");
+header("location:/Chef/controleur-index.php");
 ?>

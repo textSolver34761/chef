@@ -11,8 +11,6 @@
         <script type="text/javascript" src="/Chef/Style/style.js"></script>
     </head>
   <body>
-    <?php require('../Vue/entete.php');?>
-    <?php require('../Vue/recherche.php');?>
     <h1>Contact me </h1>
       <form method="post" action="https://formspree.io/pradonbenjamin@gmail.com"id="my-form-element" cf-form>
         <fieldset>
@@ -71,6 +69,5 @@
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
     <div id="cf-context" class="dark-theme" role="cf-context" cf-context></div>
-    <?php require('../Vue/piedpage.php');?>
   </body>
 </html>

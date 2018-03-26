@@ -11,8 +11,6 @@
   </head>
   <body>
     <!--<div class="bgimg">-->
-    <?php require('Vue/entete.php');?>
-    <?php require('Vue/recherche.php');?>
         <h1 class="center">Welcome on my personal website</h1>
         <br>
         <div class="ui items">
@@ -35,7 +33,6 @@
             </div>
           </div>
         </div>
-      <?php require('Vue/piedpage.php');?>
     <!--</div>-->
   </body>
 </html>

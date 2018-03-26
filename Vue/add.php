@@ -10,8 +10,6 @@
         <script type="text/javascript" src="/Chef/Style/style.js"></script>
     </head>
   <body>
-    <?php require('../Vue/entete.php');?>
-    <?php require('../Vue/recherche.php');?>
     <h1> Add a new article </h1>
     <form method="post" action="/Chef/Controleur/controleur-add.php">
         <p>
@@ -41,6 +39,5 @@
         </p>
 
     </form>
-    <?php require('../Vue/piedpage.php');?>
   </body>
 </html>

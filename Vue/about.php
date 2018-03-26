@@ -11,8 +11,6 @@
   </head>
   <body>
     <!--<div class="bgimg">-->
-        <?php require('../Vue/entete.php');?>
-        <?php require('../Vue/recherche.php');?>
         <h1 class="center">You whant to know more about me?</h1> <br>
         <h3 class="center"> You are on the right place! </h3>
         <br>
@@ -35,7 +33,6 @@
         <p>
         Cras molestie dolor sit amet dignissim maximus. Fusce iaculis a risus ac finibus. Nunc ultrices rutrum augue ut maximus. Donec finibus volutpat lacus. Morbi id iaculis erat. Cras fermentum augue orci, ut auctor nisl finibus eu. Cras maximus non metus id rutrum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae
         </p>
-        <?php require('../Vue/piedpage.php');?>
     <!--</div>-->
   </body>
 </html>

@@ -11,8 +11,6 @@
     </head>
     <body>
         <div class="register">
-            <?php require('../Vue/entete.php');?>
-            <?php require('../Vue/recherche.php');?>
             <h2>Create your account</h2>
             <br>
             <form action="../Controleur/controleur-registration.php" method = "post">
@@ -26,6 +24,5 @@
                 <input type="submit" name="register" value="REGISTER NOW">
             </form>
         </div>
-        <?php require('../Vue/piedpage.php');?>
     </body>
 </html>

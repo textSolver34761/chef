@@ -10,8 +10,6 @@
         <script type="text/javascript" src="/Chef/Style/style.js"></script>
     </head>
   <body>
-    <?php require('../Vue/entete.php');?>
-    <?php require('../Vue/recherche.php');?>
     <h1> Edit the article </h1>
     <form method="post" action="/Chef/Controleur/controleur-edit.php?id=<?= $article['id'] ?>">
         <p>
@@ -34,6 +32,5 @@
             <input type="submit" name="submit" value="Edit" />
         </p>
     </form>
-    <?php require('../Vue/piedpage.php');?>
   </body>
 </html>

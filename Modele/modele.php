@@ -29,7 +29,7 @@ function register(){
 			$pdo_statement->execute()
 		){
 			echo 'You have been successfully registred!';
-			header("location:require_once('/index.php')");
+			header("location:require_once('/controleur-index.php')");
 		}
 	}
 }
@@ -51,7 +51,7 @@ function login(){
 			$count = $pdo_statement->rowCount();
 			if($count > 0){
 				$_SESSION["nom"] = $_POST["nom"];
-				header("location:require_once('/../../index.php/')");
+				header("location:require_once('/../../controleur-index.php/')");
 			}
 		}
 	}

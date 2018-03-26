@@ -11,8 +11,6 @@
   </head>
   <body>
     <!--<div class="bgimg">-->
-    <?php require('../Vue/entete.php');?>
-    <?php require('../Vue/recherche.php');?>
           <?php if(!isset($_SESSION['nom'])): ?>
             <h1 class="center"> Welcome to my blog ! </h1>
             <h2 class="center"> Tips, tutorials and more on chatbots, artificials intelligence </h2>
@@ -40,7 +38,6 @@
         ?>
         <br>
         <?php endif; ?>
-      <?php require('../Vue/piedpage.php');?>
     <!--</div>-->
   </body>
 </html>

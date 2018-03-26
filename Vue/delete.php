@@ -11,8 +11,6 @@
 </head>
 <body>
     <div class="bgimg">
-    <?php require('../Vue/entete.php');?>
-    <?php require('../Vue/recherche.php');?>
         <h1>Delete the article:</h1>
         <br>
         <form action="/Chef/Controleur/controleur-delete.php?id=<?= $article['id'] ?>" method="post">
@@ -35,6 +33,5 @@
         ?>
         <br>
     </div>
-    <?php require('../Vue/piedpage.php');?>
 </body>
 </html>
