@@ -9,12 +9,3 @@
     </div>    
 </form>
 <br>
-<?php
-if(!empty($donnee)){
-    echo 'You have searched for : ' . $chainesearch . '<br>';
-    echo 'The search results are : <br>';
-    foreach ($donnee as $donnees){
-    echo $donnees['recherche'];
-    }
-}
-?>
