@@ -11,8 +11,10 @@ Lot 3 : moteur de recherche + réalisations <br>
 Lot 4 : Mettre le site en responsive <br>
 <br>
 Voici les premiers lots de la seconde version du projet (avec Sympony) : <br>
-Lot 5 : Mettre le site multilingue (Français et Anglais) <br>
-Lot 6 : 
+Lot 5 : Mettre un espace utilisateur <br>
+Lot 6 : Créer un template pour le contenue de l'article <br>
+Lot 7 : Mettre le site multilingue (Français et Anglais) <br>
+Lot 8 : Améliorer les chatbots "contact" et Machine Learing"
 ---
 ---
 ---
@@ -29,5 +31,7 @@ Lot 3: search engine + achievements <br>
 Lot 4 : Have a responsive website <br>
 <br>
 Here are the first lots of the second version of the project (with Sympony) : <br>
-Lot 5 : Have a multilingual site (French and English) <br>
-Lot 6 : 
+Lot 5 : Have a membrer zone <br>
+Lot 6 : Create a template for the content of the article <br>
+Lot 7 : Have a multilingual website (French and English) <br>
+Lot 8 : Improve the chatbots "contact" and "Machine Learning"
