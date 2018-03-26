@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__.'/../Modele/modele.php';
+require_once __DIR__.'/../Modele/modele.php';
 
 if(isset($_POST['recherche'])){
 $chainesearch = $_POST['keywords'];
